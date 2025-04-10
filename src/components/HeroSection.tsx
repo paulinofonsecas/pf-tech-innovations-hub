@@ -35,13 +35,7 @@ const HeroSection = () => {
           </div>
           <div className="hidden lg:flex justify-end animate-fade-in">
             <div className="relative">
-              <div className="absolute -top-10 -left-10 w-64 h-64 bg-brand-blue/10 dark:bg-brand-blue/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-lightBlue/20 dark:bg-brand-lightBlue/30 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-              <div className="relative bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl">
-                <div className="aspect-video w-full max-w-lg rounded-lg bg-gradient-to-br from-brand-blue to-brand-darkBlue dark:from-brand-lightBlue dark:to-brand-blue flex items-center justify-center">
-                  <span className="text-white dark:text-gray-900 text-xl font-semibold">Soluções Tecnológicas</span>
-                </div>
-              </div>
+              <img src="/images/medium-logo.png" alt="Hero Image" className="w-80 h-full object-cover" />
             </div>
           </div>
         </div>
