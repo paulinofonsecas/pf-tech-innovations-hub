@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -17,16 +16,20 @@ const HeroSection = () => {
               impulsionar o crescimento do seu negócio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-brand-blue hover:bg-brand-darkBlue dark:bg-brand-lightBlue dark:hover:bg-brand-blue dark:text-gray-900">
+              <Button size="lg" className="bg-brand-blue hover:bg-brand-darkBlue dark:bg-brand-lightBlue dark:hover:bg-brand-blue dark:text-gray-900"
+                onClick={() => window.location.href = '#services'}>
                 Conheça nossos serviços
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
                 className="border-brand-blue text-brand-blue hover:text-brand-darkBlue hover:border-brand-darkBlue dark:border-brand-lightBlue dark:text-brand-lightBlue dark:hover:border-brand-blue dark:hover:text-brand-blue"
               >
-                Entre em contato
+                <a href="https://wa.me/+244925412030" target="_blank" rel="noopener noreferrer">
+                  Entre em contato
+                </a>
               </Button>
             </div>
           </div>

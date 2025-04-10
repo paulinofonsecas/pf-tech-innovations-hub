@@ -10,6 +10,35 @@ import {
   Facebook 
 } from "lucide-react";
 
+const contactInfo = {
+  address: "Rua serpa pinto, Cuito, Bié, Angola",
+  phone: "+244 925 412 030",
+  email: "suporte@pftech.ao",
+  socials: [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/company/pftech-ao",
+      icon: Linkedin,
+      ariaLabel: "LinkedIn",
+      colorClasses: "dark:bg-blue-600 dark:hover:bg-blue-700"
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/pftech.ao",
+      icon: Instagram,
+      ariaLabel: "Instagram",
+      colorClasses: "dark:bg-pink-600 dark:hover:bg-pink-700"
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/pftech.ao",
+      icon: Facebook,
+      ariaLabel: "Facebook",
+      colorClasses: "dark:bg-indigo-600 dark:hover:bg-indigo-700"
+    }
+  ]
+};
+
 const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-gray-50 dark:bg-gray-800">
@@ -88,7 +117,7 @@ const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-brand-blue mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium dark:text-gray-100">Endereço</p>
-                    <p className="text-gray-600 dark:text-gray-400">Av. Tecnologia, 1234, São Paulo - SP</p>
+                    <p className="text-gray-600 dark:text-gray-400">{contactInfo.address}</p>
                   </div>
                 </div>
 
@@ -96,7 +125,7 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-brand-blue mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium dark:text-gray-100">Telefone</p>
-                    <p className="text-gray-600 dark:text-gray-400">+55 (11) 1234-5678</p>
+                    <p className="text-gray-600 dark:text-gray-400">{contactInfo.phone}</p>
                   </div>
                 </div>
 
@@ -104,7 +133,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-brand-blue mr-3 mt-0.5" />
                   <div>
                     <p className="font-medium dark:text-gray-100">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">contato@pftechinnovacoes.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">{contactInfo.email}</p>
                   </div>
                 </div>
               </div>
@@ -113,27 +142,16 @@ const ContactSection = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6 dark:text-white">Redes Sociais</h3>
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="bg-brand-blue text-white p-3 rounded-full hover:bg-brand-darkBlue transition-colors dark:bg-blue-600 dark:hover:bg-blue-700"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="bg-brand-blue text-white p-3 rounded-full hover:bg-brand-darkBlue transition-colors dark:bg-pink-600 dark:hover:bg-pink-700"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a 
-                  href="#" 
-                  className="bg-brand-blue text-white p-3 rounded-full hover:bg-brand-darkBlue transition-colors dark:bg-indigo-600 dark:hover:bg-indigo-700"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-5 w-5" />
-                </a>
+                {contactInfo.socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    className={`bg-brand-blue text-white p-3 rounded-full hover:bg-brand-darkBlue transition-colors ${social.colorClasses}`}
+                    aria-label={social.ariaLabel}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

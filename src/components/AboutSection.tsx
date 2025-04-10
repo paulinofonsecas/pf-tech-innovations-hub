@@ -47,9 +47,9 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <Button className="bg-brand-blue hover:bg-brand-darkBlue mt-4 dark:text-white">
+            {/* <Button className="bg-brand-blue hover:bg-brand-darkBlue mt-4 dark:text-white">
               Saiba mais
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

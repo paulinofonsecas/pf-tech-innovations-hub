@@ -81,16 +81,16 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Contato</h4>
             <ul className="space-y-3 text-gray-400">
-              <li>Av. Tecnologia, 1234</li>
-              <li>São Paulo - SP</li>
-              <li>+55 (11) 1234-5678</li>
-              <li>contato@pftechinnovacoes.com</li>
+              <li>Rua serpa pinto, Cuito</li>
+              <li>Bié, Angola</li>
+              <li>+244 925 412 030</li>
+              <li>suporte@pftech.ao</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} PF Tech Inovações. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} PF Tech. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
