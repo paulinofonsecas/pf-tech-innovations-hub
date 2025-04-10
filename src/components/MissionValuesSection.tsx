@@ -1,4 +1,3 @@
-
 import { 
   LightbulbIcon, 
   BadgeCheck, 
@@ -38,16 +37,16 @@ const values = [
 
 const MissionValuesSection = () => {
   return (
-    <section id="mission" className="section-padding bg-white">
+    <section id="mission" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-8">
             <div>
               <h3 className="text-brand-blue font-semibold mb-2">Nossa Missão</h3>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-3xl font-bold mb-4 dark:text-gray-100">
                 Impulsionar o sucesso com tecnologia inovadora
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 dark:text-gray-300">
                 Impulsionar o sucesso de nossos clientes através de soluções tecnológicas 
                 inovadoras e personalizadas, oferecendo produtos de alta qualidade e um 
                 atendimento excepcional.
@@ -56,10 +55,10 @@ const MissionValuesSection = () => {
 
             <div>
               <h3 className="text-brand-blue font-semibold mb-2">Nossa Visão</h3>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-3xl font-bold mb-4 dark:text-gray-100">
                 Referência em soluções tecnológicas
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 dark:text-gray-300">
                 Ser reconhecida como líder no mercado de soluções tecnológicas personalizadas 
                 e venda de equipamentos informáticos, sendo a primeira escolha de empresas e 
                 indivíduos que buscam inovação, qualidade e confiabilidade.
@@ -69,20 +68,20 @@ const MissionValuesSection = () => {
 
           <div>
             <h3 className="text-brand-blue font-semibold mb-2">Nossos Valores</h3>
-            <h2 className="text-3xl font-bold mb-8">
+            <h2 className="text-3xl font-bold mb-8 dark:text-gray-100">
               O que nos define
             </h2>
 
             <div className="grid grid-cols-1 gap-6">
               {values.map((value, index) => (
-                <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow">
+                <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow dark:bg-gray-800">
                   <CardContent className="flex p-6">
-                    <div className="mr-4 p-2 rounded-full bg-gray-50 flex items-center justify-center">
+                    <div className="mr-4 p-2 rounded-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center">
                       {value.icon}
                     </div>
                     <div>
-                      <h3 className="font-bold text-xl mb-2">{value.title}</h3>
-                      <p className="text-gray-600">{value.description}</p>
+                      <h3 className="font-bold text-xl mb-2 dark:text-white">{value.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-400">{value.description}</p>
                     </div>
                   </CardContent>
                 </Card>

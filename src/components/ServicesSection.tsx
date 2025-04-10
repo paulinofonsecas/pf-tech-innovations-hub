@@ -1,4 +1,3 @@
-
 import {
   LayoutDashboard,
   Monitor,
@@ -36,13 +35,13 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-gray-100">
             Nossos Serviços e Produtos
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             Soluções completas para atender às necessidades específicas da sua empresa
           </p>
         </div>
@@ -51,14 +50,14 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+              className="border border-gray-100 hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700"
             >
               <CardHeader className="pb-2">
                 <div className="mb-4">{service.icon}</div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl dark:text-white">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600">
+                <CardDescription className="text-gray-600 dark:text-gray-400">
                   {service.description}
                 </CardDescription>
               </CardContent>
